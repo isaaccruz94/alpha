@@ -8,7 +8,7 @@
    
         <h2 class="text-center text-2xl mb-7">Registro de Usuarios</h2>
    
-    <form action="{{ route('register') }}" method="POST" class="w-1/2 m-auto" novalidate>
+    <form action="{{ route('registro.store') }}" method="POST" class="w-1/2 m-auto" novalidate>
         @csrf
 
         <div class="ml-28 mb-7">
@@ -39,6 +39,9 @@
         <div class="ml-28 mb-7">
                 <label for="password_confirmation" class="block">Repite Contrasena</label>
                 <input type="password" id="password_confirmation" name="password_confirmation" placeholder="ingresa tu nueva contrasena"  class="w-96 text-center">
+                @error('password')
+                <p>{{ $message }}</p>
+                @enderror
         </div>
 
         <input type="submit" value="Crear Cuenta de usuario">

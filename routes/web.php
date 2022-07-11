@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/registro', [RegisterController::class, 'index'])->name('register');
-Route::post('/registro', [RegisterController::class, 'store']);
+// Route::get('/registro', [RegisterController::class, 'index'])->name('register');
+// Route::post('/registro', [RegisterController::class, 'store']);
 
+Route::controller(RegisterController::class)->prefix('registro')->name('registro.')->group(function(){
+    Route::get('/', 'index')->name('form');
+    Route::post('/', 'store')->name('store');
+});

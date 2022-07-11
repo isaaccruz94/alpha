@@ -20,7 +20,7 @@
                     <a href="">
                         <li class="list-none inline-flex">Iniciar sesion</li>
                     </a>
-                    <a href="{{ route('register') }}">
+                    <a href="{{ route('registro.form') }}">
                         <li class="list-none inline-flex">Registro</li>
                     </a>
                 </div>
