@@ -11,14 +11,18 @@
     </head>
     <body>
 
-        <header>
-            <nav>
-                <div>
-                    <li>ALPHA</li>
+        <header class=" w-auto h-14 mb-7 drop-shadow-lg">
+            <nav class="w-4/5 mx-auto flex justify-between items-center">
+                <div class="py-4">
+                    <li class="list-none inline-flex">ALPHA</li><a href="/"></a>
                 </div>
                 <div>
-                    <li>Iniciar sesion</li>
-                    <li>Registro</li>
+                    <a href="">
+                        <li class="list-none inline-flex">Iniciar sesion</li>
+                    </a>
+                    <a href="{{ route('register') }}">
+                        <li class="list-none inline-flex">Registro</li>
+                    </a>
                 </div>
             </nav>
         </header>
